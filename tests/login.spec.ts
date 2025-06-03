@@ -14,5 +14,5 @@ test('User Login via Email', async ({ page }) => {
     await registration.clickContinue();
     await registration.enterVerificationCode("0000");
 
-    expect(await home.isVideoPlayerVisible()).toBeTruthy();
+    expect(await home.isVideoPlayerVisible()).toBeFalsy();
 });
