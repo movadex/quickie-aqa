@@ -3,7 +3,7 @@ import { test as base, chromium, expect } from '@playwright/test';
 export const test = base.extend({
     page: async ({}, use, testInfo) => {
         const browser = await chromium.launch({
-            headless: false,
+            headless: true,
             args: [
                 '--start-maximized',
                 '--use-fake-ui-for-media-stream',      // auto-accept camera/microphone
