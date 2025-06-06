@@ -1,3 +1,5 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","10490","User Login via Email","chromium","Tue Jun 03 19:45:59 UTC 2025","passed","Tue Jun 03 19:46:10 UTC 2025","","login.spec.ts","",""
-"","11869","New User Registration via Email","chromium","Tue Jun 03 19:45:59 UTC 2025","passed","Tue Jun 03 19:46:11 UTC 2025","","registration.spec.ts","",""
+"","154","User Login via Email","chromium","Fri Jun 06 14:11:07 UTC 2025","failed","Fri Jun 06 14:11:07 UTC 2025","","user-login-email.spec.ts","",""
+"","249","Admin Login","chromium","Fri Jun 06 14:11:06 UTC 2025","failed","Fri Jun 06 14:11:06 UTC 2025","","admin-login.spec.ts","",""
+"","254","New Creator Registration","chromium","Fri Jun 06 14:11:06 UTC 2025","failed","Fri Jun 06 14:11:06 UTC 2025","","creator-registration.spec.ts","",""
+"","156","New User Registration via Email","chromium","Fri Jun 06 14:11:07 UTC 2025","failed","Fri Jun 06 14:11:07 UTC 2025","","user-registration-email.spec.ts","",""
