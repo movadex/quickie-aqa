@@ -3,13 +3,18 @@ import { test as base, chromium, expect } from '@playwright/test';
 export const test = base.extend({
     page: async ({}, use, testInfo) => {
         const browser = await chromium.launch({
-            headless: true,
-            args: ['--start-maximized'],
+            headless: false,
+            args: [
+                '--start-maximized',
+                '--use-fake-ui-for-media-stream',      // auto-accept camera/microphone
+                '--use-fake-device-for-media-stream',  // use fake media stream (mock camera)
+            ],
         });
 
         const context = await browser.newContext({
             viewport: null,
             deviceScaleFactor: undefined,
+            permissions: ['camera'], // grant camera permission
         });
 
         const page = await context.newPage();

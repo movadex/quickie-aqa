@@ -1,5 +1,6 @@
 import { test } from './helpers/base.helper';
 import { expect } from '@playwright/test';
+import { TestData } from './helpers/testData';
 import { HomePage } from '../src/pages/HomePage';
 import { RegistrationPage } from '../src/pages/RegistrationPage';
 
@@ -11,17 +12,17 @@ test('New User Registration via Email', async ({ page }) => {
 
     await home.openApplication();
     await registration.verifyAge();
-    await registration.selectLoginMethod("Email");
+    await registration.selectLoginMethod(TestData.EMAIL_LOGIN);
     await registration.fillEmail(randomEmail);
     await registration.clickContinue();
-    await registration.enterVerificationCode("0000");
+    await registration.enterVerificationCode(TestData.VERIFICATION_CODE);
     await registration.selectGenderIdentity("Male");
     await registration.clickNext();
     await registration.selectPreferredGender("Gay");
     await registration.clickNext();
     await registration.selectFavoriteCategories(['Bear', 'Feet', 'Jock']);
     await registration.clickNext();
-    await registration.skipPhoneNumber();
+    await home.skipPhoneNumber();
 
     expect(await home.isVideoPlayerVisible()).toBeTruthy();
 });

@@ -19,7 +19,7 @@ Automated UI test project for the Quickie application using *Playwright*, *TypeS
 
 - npx playwright test                               # run all tests
 - npx playwright test --headed                      # run all tests - run tests in headed mode (browser UI visible)
-- npx playwright test tests/registration.spec.ts    # run a specific test
+- npx playwright test tests/user-registration-email.spec.ts    # run a specific test
 
 # Custom Test Scripts
 

@@ -7,6 +7,10 @@ export class HomePage {
         await this.page.goto('https://dev-go.quickie.app');
     }
 
+    async skipPhoneNumber() {
+        await this.page.click('text="Skip for now"');
+    }
+
     async logOut() {
         await this.page.locator('button').first().click();
         await this.page.click(`text="Log out"`);
